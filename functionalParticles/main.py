@@ -33,7 +33,7 @@ if __name__ == '__main__':
         os.makedirs(os.getcwd() + "/results/" + inference)
 
     for dataset in all_dataset:
-        data = generate_dataset(dataset, is_one_hot = True)
+        data = generate_dataset(dataset, device, is_one_hot = True)
         for prior_type in all_prior_type:
             for temperature in all_temperature:
                 identifier = inference + "_" + dataset + "_" + prior_type + "_" + str(temperature)
